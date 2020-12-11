@@ -1,0 +1,11 @@
+import cv2
+template=cv2.imread ("IMG-7008.jpg")
+
+template = cv2.cvtColor(template, cv2.COLOR_BGR2GRAY)
+
+template = cv2.Canny(template, 25, 300)
+
+cv2.namedWindow('template', cv2.WINDOW_NORMAL)
+cv2.imshow('template',template)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
